@@ -1,7 +1,11 @@
 # Climb.social
-JS library for interacting with the Climb.social API.
+JS library for interacting with the [Climb.social](http://climb.social/) API.
 
 Provides an [RxJS Observable](http://reactivex.io/) of _pages_ of approved items for use in JS applications.
+
+## Description
+
+The default exports of the module exposes a `getStream` method that accepts a `collectionId` which you can _subscribe_ to.
 
 ## Installation
 
