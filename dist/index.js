@@ -6,9 +6,7 @@ Object.defineProperty(exports, '__esModule', {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _rx = require('rx');
-
-var _rx2 = _interopRequireDefault(_rx);
+var _rxLite = require('rx-lite');
 
 var _fetchJsonp = require('fetch-jsonp');
 
@@ -18,9 +16,9 @@ var getStream = function getStream(collectionId) {
 
     var pollRate = 5 * 1000;
 
-    var requestStream = Rx.Observable.just('http://app.climb.social/api/v1/collections/' + collectionId);
+    var requestStream = _rxLite.Observable.just('http://app.climb.social/api/v1/collections/' + collectionId);
 
-    var updateStream = Rx.Observable.interval(pollRate).startWith(null);
+    var updateStream = _rxLite.Observable.interval(pollRate).startWith(null);
 
     var responseStream = updateStream.combineLatest(requestStream, function (tick, url) {
         return url;
@@ -28,7 +26,7 @@ var getStream = function getStream(collectionId) {
 
         var requestUrl = '' + baseUrl;
 
-        return Rx.Observable.fromPromise((0, _fetchJsonp2['default'])(requestUrl).then(function (resp) {
+        return _rxLite.Observable.fromPromise((0, _fetchJsonp2['default'])(requestUrl).then(function (resp) {
             return resp.json();
         }));
     });
