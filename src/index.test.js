@@ -37,6 +37,47 @@ describe('Climb.social library', () => {
 
         });
 
+        it('should accept an optional polling interval value', () => {
+
+            expect(() => {
+                const stream = climb.getStream(collectionId, 0.001);
+            }).to.not.throw();
+
+            expect(() => {
+                const stream = climb.getStream(collectionId, 5);
+            }).to.not.throw();
+
+            expect(() => {
+                const stream = climb.getStream(collectionId, 50000);
+            }).to.not.throw();
+
+        });
+
+        it('should error with a negative polling value', () => {
+
+            expect(() => {
+                const stream = climb.getStream(collectionId, -200);
+            }).to.throw();
+
+            expect(() => {
+                const stream = climb.getStream(collectionId, 0);
+            }).to.throw();
+
+            expect(() => {
+                const stream = climb.getStream(collectionId, -0.00001);
+            }).to.throw();
+
+        });
+
+
+        it('should error if interval length is not a interval', () => {
+
+            expect(() => {
+                const stream = climb.getStream(collectionId, '8');
+            }).to.throw();
+
+        });
+
         it('should return an object with a `subscribe()` method (an Observable)', () => {
 
             const stream = climb.getStream(collectionId);
