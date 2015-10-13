@@ -1,44 +1,47 @@
 {
-    "name": "climb-social",
-    "description": "JS client library for Climb.social.",
-    "version": "0.0.0-semantically-released",
-    "main": "dist/index.js",
-    "scripts": {
-        "commit": "git-cz",
-        "prebuild": "rm -rf dist &&  mkdir dist",
-        "build": "babel src/index.js -o dist/index.js",
-        "test": "mocha src/index.test.js --compilers js:babel/register",
-        "test:watch": "mocha src/index.test.js -w --compilers js:babel/register",
-        "semantic-release": "semantic-release pre && npm publish && semantic-release post"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Climb-social/climb-social.git"
-    },
-    "keywords": [
-        "javascript",
-        "RxJS",
-        "climb.social"
-    ],
-    "author": "Michele Memoli <michele@100shapes.com>",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Climb-social/climb-social/issues"
-    },
-    "homepage": "https://github.com/Climb-social/climb-social#readme",
-    "dependencies": {
-        "fetch-jsonp": "^0.9.2",
-        "rx-lite": "^4.0.3"
-    },
-    "devDependencies": {
-        "babel": "^5.8.23",
-        "chai": "^3.3.0",
-        "commitizen": "^1.0.5",
-        "cz-conventional-changelog": "^1.1.2",
-        "mocha": "^2.3.3",
-        "semantic-release": "^4.3.5"
-    },
-    "czConfig": {
-        "path": "node_modules/cz-conventional-changelog"
-    }
+  "name": "climb-social",
+  "description": "JS client library for Climb.social.",
+  "version": "0.0.0-semantically-released",
+  "main": "dist/index.js",
+  "scripts": {
+    "commit": "git-cz",
+    "prebuild": "rm -rf dist &&  mkdir dist",
+    "build": "babel src/index.js -o dist/index.js",
+    "test": "mocha src/index.test.js --compilers js:babel/register",
+    "test:watch": "mocha src/index.test.js -w --compilers js:babel/register",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Climb-social/climb-social.git"
+  },
+  "keywords": [
+    "javascript",
+    "RxJS",
+    "climb.social"
+  ],
+  "author": "Michele Memoli <michele@100shapes.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Climb-social/climb-social/issues"
+  },
+  "homepage": "https://github.com/Climb-social/climb-social#readme",
+  "dependencies": {
+    "fetch-jsonp": "^0.9.2",
+    "rx-lite": "^4.0.3"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "chai": "^3.3.0",
+    "commitizen": "^1.0.5",
+    "cz-conventional-changelog": "^1.1.2",
+    "jsdom": "^6.5.1",
+    "mocha": "^2.3.3",
+    "mocha-jsdom": "^1.0.0",
+    "nock": "^2.15.0",
+    "semantic-release": "^4.3.5"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  }
 }

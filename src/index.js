@@ -3,7 +3,11 @@ import fetchJsonp from 'fetch-jsonp';
 
 const getStream = (collectionId) => {
 
-    const pollRate = 5 * 1000;
+    if (!collectionId) {
+        throw new Error('Please specify a collectionId');
+    }
+
+    const pollRate = 8 * 1000;
 
     const requestStream = Observable.just(`http://app.climb.social/api/v1/collections/${collectionId}`);
 
