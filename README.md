@@ -1,5 +1,5 @@
 # Climb.social
-JS library for interacting with the [Climb.social](http://climb.social/) API.
+JS library for interacting with the [Climb.social](http://climb.social/) [API](http://docs.climbsocial.apiary.io/).
 
 Provides an [RxJS Observable](http://reactivex.io/) of _pages_ of approved items for use in JS applications.
 
