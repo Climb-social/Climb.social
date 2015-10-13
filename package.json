@@ -8,6 +8,7 @@
         "prebuild": "rm -rf dist &&  mkdir dist",
         "build": "babel src/index.js -o dist/index.js",
         "test": "mocha src/index.test.js -w --compilers js:babel/register",
+        "test:single": "mocha src/index.test.js --compilers js:babel/register",
         "semantic-release": "semantic-release pre && npm publish && semantic-release post"
     },
     "repository": {
