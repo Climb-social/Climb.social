@@ -5,7 +5,7 @@ Provides an [RxJS Observable](http://reactivex.io/) of _pages_ of approved items
 
 ## Installation
 
-    npm install climb-social
+    npm install climb-social --save-dev
 
 ## Usage
 
