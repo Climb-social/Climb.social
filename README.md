@@ -16,10 +16,14 @@ The default exports of the module exposes a `getStream` method that accepts a `c
 
 ## Usage
 
+### Getting approved items from your Climb.social collection
+
     var climb = require('climb-social');
 
+    var collectionId = '561ba63445284e1740e016f7';
+
     climb
-        .getStream(<collectionId>)
+        .getStream(collectionId)
         .subscribe(function(items) {
 
             // i.e. Do something with items:
@@ -28,3 +32,16 @@ The default exports of the module exposes a `getStream` method that accepts a `c
             });
 
         });
+
+### Specifying a polling interval
+
+You can also specify how often you'd like to poll the Climb.social API for changes.
+
+Pass a positive number (representing the number of seconds) as a second arg to `getStream()`:
+
+    climb
+        .getStream(collectionId, 40)
+        .subscribe(function(items) {
+            ...
+        });
+    });
