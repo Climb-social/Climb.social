@@ -16,6 +16,10 @@ The default exports of the module exposes a `getStream` method that accepts a `c
 
 ## Usage
 
+Make sure you've got a [Climb.social account](http://app.climb.social/#signup), you've made a new collection and you've approved some content.
+
+Then note down your `collectionId`.
+
 ### Getting approved items from your Climb.social collection
 
     var climb = require('climb-social');
