@@ -2,7 +2,7 @@
 
 [![Travis build](https://img.shields.io/travis/Climb-social/climb-social.svg?style=flat-square)](https://travis-ci.org/Climb-social/climb-social)
 
-JS library for interacting with the [Climb.social](http://climb.social/) [API](http://docs.climbsocial.apiary.io/).
+JS library for interacting with the [Climb.social](http://climb.social/?utm_source=github&utm_medium=readme&utm_campaign=climb-social) [API](http://docs.climbsocial.apiary.io/).
 
 Provides an [RxJS Observable](http://reactivex.io/) of _pages_ of approved items for use in JS applications.
 
