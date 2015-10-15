@@ -6,6 +6,8 @@ JS library for interacting with the [Climb.social](http://climb.social/?utm_sour
 
 Provides an [RxJS Observable](http://reactivex.io/) of _pages_ of approved items for use in JS applications.
 
+Using React? Try [react-climb-social](https://github.com/Climb-social/react-climb-social). There's also [angular-climb](https://github.com/Climb-social/angular-climb) and a simple [JSONP REST API](https://github.com/Climb-social/climb-social) for you to choose from.
+
 ## Description
 
 The default exports of the module exposes a `getStream` method that accepts a `collectionId` which you can _subscribe_ to.
